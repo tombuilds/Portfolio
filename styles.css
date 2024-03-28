@@ -1,0 +1,166 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set default font family and color */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Center the page */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within sections */
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+    flex: 1; /* Allow main to grow and fill available space */
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+article {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Added for positioning of preview */
+}
+
+article h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Added to indicate clickable */
+}
+
+article p {
+    margin-bottom: 15px;
+}
+
+article a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative; /* Added for positioning of preview */
+}
+
+article a:hover {
+    background-color: #555;
+}
+
+/* Project preview styles */
+article .preview {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px); /* Position to the right of the button */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+article:hover .preview {
+    display: block;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* About Me section */
+#about {
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 auto 30px; /* Center horizontally and add bottom margin */
+}
+
+#about img.avatar {
+    width: 150px; /* Set width */
+    height: 150px; /* Set height */
+    border-radius: 50%; /* Make it circular */
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+/* Projects section */
+#projects {
+    max-width: 800px; /* Limit width for better readability */
+    margin: 30px auto; /* Add top and bottom margin, center horizontally */
+}
+
+/* Contact Me section */
+#contact {
+    max-width: 600px; /* Limit width for better readability */
+    margin: 30px 20px 0; /* Add top margin, left and right margin, no bottom margin */
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form label {
+    margin-bottom: 10px; /* Add spacing between fields */
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+    margin-bottom: 15px; /* Add spacing between fields */
+}
+
+#contact form button {
+    width: 100px; /* Set button width */
+}

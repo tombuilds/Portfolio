@@ -206,7 +206,7 @@ h2 {
 .medium-text {
     font-size: 45px;
     font-weight: bold;
-    font-color: grey;
+    font color: grey;
     margin-bottom: 10px;
 }
 
@@ -267,9 +267,9 @@ h2 {
 
 #about h2 {
     font-size: 60px;
-    margin-top: 20px;
+    margin-top: 2px;
     margin-bottom: 40px; /* Increased margin */
-    font-color:#b48bb4
+    font color: #b48bb4
 }
 
 #about p {
@@ -406,7 +406,7 @@ h2 {
     align-items: center;
 }
 
-.contact-box p {
+.contact-box a {
     margin-left: 10px;
 }
 
@@ -415,12 +415,23 @@ h2 {
     height: auto;
 }
 
-/* Footer styles */
+/* FOOTER */
+
 footer {
-    color: #000000;
-    padding: 20px;
+    height: 16vh;
+    margin: 0 1rem;
+}
+
+footer p {
     text-align: center;
-    width: 100%; /* Full width */
-    bottom: 0; /* Stick to the bottom */
-    margin: 0 auto; /* Center the footer horizontally */
+    margin-top: 40px;
+}
+
+.nav-links {
+    text-align: center;
+}
+
+footer .nav-links-container {
+    display: flex;
+    justify-content: center;
 }

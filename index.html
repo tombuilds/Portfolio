@@ -42,15 +42,15 @@
                 <img src="Media/Pics/Square.JPEG" alt="Avatar" class="avatar">
                 <div class="text">
                     <p class="small-text">Hello, I'm</p>
-                    <p class="large-text">Tom S. Chemmalakuzhy</p>
+                    <h2 class="large-text">Tom S. Chemmalakuzhy</h2>
                     <p class="medium-text">Frontend Developer</p>
                     <div class="btn-container">
                         <button class="btn btn-color-2" onclick="window.open('Media/Docs/Tom\'s Resume.pdf')">Download CV</button>
                         <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
                     </div>
                     <div id="socials-container">
-                        <img src="Media/Pics/Icons/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/tom-s-chemmalakuzhy/'">
-                    </div>                    
+                        <img src="Media/Pics/Icons/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="window.open('https://www.linkedin.com/in/tom-s-chemmalakuzhy/', '_blank')">
+                    </div>            
                 </div>
             </div>
         </section>
@@ -96,12 +96,12 @@
                 <h2>Contact Me</h2>
                 <div class="contact-info">
                     <div class="contact-box">
-                        <img src="Media/Pics/Icons/email.jpg" alt="Email Icon" class="icon">
-                        <p>tomchemmalakuzhy@gmail.com</p>
+                        <img src="Media/Pics/Icons/email.jpg" alt="Email Icon" class="icon" onclick="window.open('mailto:tomchemmalakuzhy@gmail.com', '_blank')">
+                        <a href="mailto:tomchemmalakuzhy@gmail.com">tomchemmalakuzhy@gmail.com</a>
                     </div>
                     <div class="contact-box">
-                        <img src="Media/Pics/Icons/linkedin.png" alt="LinkedIn Icon" class="icon">
-                        <p>LinkedIn</p>
+                        <img src="Media/Pics/Icons/linkedin.png" alt="LinkedIn Icon" class="icon" onclick="window.open('https://www.linkedin.com/in/tom-s-chemmalakuzhy/', '_blank')">
+                        <a href="https://www.linkedin.com/in/tom-s-chemmalakuzhy/" target="_blank" onclick="window.open('https://www.linkedin.com/in/tom-s-chemmalakuzhy/', '_blank')">LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -109,6 +109,13 @@
     </main>
 
     <footer>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
         <p>Copyright &copy; 2024 Tom S. Chemmalakuzhy. All rights reserved.</p>
     </footer>
 

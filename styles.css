@@ -1,166 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 /* Reset default margin and padding */
-body, h1, h2, h3, p, ul {
+* {
     margin: 0;
     padding: 0;
 }
 
 /* Set default font family and color */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
 }
 
-/* Center the page */
-main {
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 2rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+    display: none;
+}
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+ }
+
+.hamburger-icon {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text within sections */
-    min-height: 100vh;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
 }
 
-/* Header styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
     text-align: center;
-}
-
-header h1 {
-    font-size: 32px;
-}
-
-nav ul {
-    list-style-type: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
+    font-size: 1.5rem;
+    color: black;
     text-decoration: none;
-    font-weight: bold;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.space {
+    margin-bottom: 75px; /* Adjust the value as needed to create the desired space */
 }
 
 /* Main styles */
 main {
     padding: 20px;
-    flex: 1; /* Allow main to grow and fill available space */
 }
 
 section {
-    margin-bottom: 30px;
+    margin-bottom: 60px; /* Increased margin between sections */
+    position: relative; /* Added relative positioning for project previews */
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 36px; /* Increased heading size */
+    margin-bottom: 20px; /* Increased margin below headings */
+}
+
+/* Avatar section */
+#avatar {
+    text-align: center; /* Center the avatar and text */
+    margin-bottom: 250px;
+}
+
+.avatar {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    display: inline-block; /* Display the avatar as an inline block */
+    vertical-align: middle; /* Align the avatar vertically */
+}
+
+.text {
+    display: inline-block; /* Display the text as an inline block */
+    vertical-align: middle; /* Align the text vertically */
+    text-align: center; /* Align the text to the left */
+    margin-left: 20px; /* Add some margin to separate from the avatar */
+    line-height: 1.7;
+    margin-top: 150px;
+}
+
+.small-text, .large-text, .medium-text {
+    margin: 0; /* Remove default margins */
+}
+
+.small-text {
+    font-size: 25px;
+    font-weight: bold;
+    font-weight: bold;
+}
+
+.large-text {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.medium-text {
+    font-size: 45px;
+    font-weight: bold;
+    font-color: grey;
     margin-bottom: 10px;
 }
 
-article {
-    background-color: #fff;
-    border-radius: 5px;
+/* Add black round border to Download CV button */
+.btn-color-2 {
+    border: 2px solid #000;
+    border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative; /* Added for positioning of preview */
-}
-
-article h3 {
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    margin: 0 5px 0 auto;
     font-size: 20px;
-    margin-bottom: 10px;
-    cursor: pointer; /* Added to indicate clickable */
 }
 
-article p {
-    margin-bottom: 15px;
-}
-
-article a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
+.btn-color-2:hover {
+    background-color: #000;
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    position: relative; /* Added for positioning of preview */
 }
 
-article a:hover {
-    background-color: #555;
-}
-
-/* Project preview styles */
-article .preview {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: calc(100% + 10px); /* Position to the right of the button */
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-article:hover .preview {
-    display: block;
-}
-
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: #fff;
+/* Change Contact Info button to black round button with white text */
+.btn-color-1 {
+    border: 2px solid #000;
+    border-radius: 20px;
     padding: 20px;
-    text-align: center;
+    background-color: #380303;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 auto 0 5px;
+    font-size: 20px;
+}
+
+.btn-color-1:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icon {
+    cursor: pointer;
+    height: 3rem; /* Adjust the height of the LinkedIn icon */
+    width: auto; /* Ensure the width adjusts accordingly */
 }
 
 /* About Me section */
 #about {
-    max-width: 600px; /* Limit width for better readability */
-    margin: 0 auto 30px; /* Center horizontally and add bottom margin */
+    max-width: 800px;
+    margin: 0 auto 100px; /* Centered and increased margin */
+    text-align: center; /* Centered text */
+    font-size: 20px;
 }
 
-#about img.avatar {
-    width: 150px; /* Set width */
-    height: 150px; /* Set height */
-    border-radius: 50%; /* Make it circular */
-    margin-bottom: 20px; /* Add space below the image */
+#about h2 {
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 40px; /* Increased margin */
+    font-color:#b48bb4
+}
+
+#about p {
+    font-size: 25px;
+}
+
+.linkedin-button {
+    display: inline-block;
+    padding: 5px 10px; /* Further reduced button padding */
+    background-color: #0077b5; /* LinkedIn blue color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 15px auto 200px auto;
+}
+
+.linkedin-button:hover {
+    background-color: #005f90; /* Darker shade of LinkedIn blue on hover */
 }
 
 /* Projects section */
+
 #projects {
-    max-width: 800px; /* Limit width for better readability */
-    margin: 30px auto; /* Add top and bottom margin, center horizontally */
+    max-width: 600px; /* Increased max width */
+    margin: 0 auto; /* Centered and increased margin */
+    margin-bottom: 300px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title p1 {
+    font-size: 25px;
+}
+
+.title h2 {
+    font-size: 60px;
+    line-height: 1.8;
+    margin-top: 1px;
+}
+
+.project {
+    display: flex; /* Use flexbox to arrange projects side by side */
+}
+
+.project-style {
+    width: calc(50% - 20px); /* Set the width of each project container */
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 50px 0 auto;
+    position: relative; /* Added relative positioning */
+    height: 400px; /* Set a fixed height for projects */
+    overflow-y: auto; /* Add vertical scroll if content exceeds height */
+}
+
+.project h3 {
+    font-size: 24px; /* Reduced heading size */
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.project p {
+    margin-bottom: 15px;
+}
+
+.project a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+    background-color: #ddd;
+}
+
+/* Project preview styles */
+.project .preview {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Add missing alpha value for transparency */
+    display: none; /* Hide the preview by default */
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.project:hover .preview {
+    display: block; /* Show the preview on hover */
 }
 
 /* Contact Me section */
 #contact {
-    max-width: 600px; /* Limit width for better readability */
-    margin: 30px 20px 0; /* Add top margin, left and right margin, no bottom margin */
+    max-width: 600px;
+    margin: 0 auto 60px auto; /* Centered horizontally and increased margin */
+    text-align: center; /* Align text to the center */
 }
 
-#contact form {
+.contact-container {
+    padding: 20px;
+    margin-bottom: 200px;
+}
+
+.contact-intro {
+    font-size: 25px; /* Set the font size for the intro */
+}
+
+.contact-container h2 {
+    font-size: 60px;
+    margin: 0 auto 40px auto;
+}
+
+.contact-info {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0 20px 0;
+    border: 2px solid #000; /* Add black outline */
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 20px;
 }
 
-#contact form label {
-    margin-bottom: 10px; /* Add spacing between fields */
+.contact-box {
+    display: flex;
+    align-items: center;
 }
 
-#contact form input,
-#contact form textarea,
-#contact form button {
-    margin-bottom: 15px; /* Add spacing between fields */
+.contact-box p {
+    margin-left: 10px;
 }
 
-#contact form button {
-    width: 100px; /* Set button width */
+.contact-box img {
+    width: 30px; /* Adjust the size of the icon */
+    height: auto;
+}
+
+/* Footer styles */
+footer {
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Full width */
+    bottom: 0; /* Stick to the bottom */
+    margin: 0 auto; /* Center the footer horizontally */
 }

@@ -6,6 +6,17 @@
     padding: 0;
 }
 
+/* Add animation to rotate the favicon */
+
+@keyframes rotateFavicon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* Set default font family and color */
 body {
     font-family: "Poppins", sans-serif;

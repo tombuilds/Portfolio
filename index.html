@@ -9,12 +9,14 @@
     <link rel="icon" href="Media/Pics/Icons/briefcase.ico" type="image/x-icon">
     <link rel="shortcut icon" href="Media/Pics/Icons/briefcase.ico" type="image/x-icon">
 </head>
+
 <body>
     <nav id="desktop-nav">
         <div class="logo">Tom S. Chemmalakuzhy</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -30,97 +32,371 @@
             </div>
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
         </div>
     </nav>
 
-    <div class="space"></div>
-
     <main>
-        <section id="avatar">
-            <div class="avatar-container">
-                <img src="Media/Pics/Square.JPEG" alt="Avatar" class="avatar">
-                <div class="text">
-                    <p class="small-text">Hello, I'm</p>
-                    <h2 class="large-text">Tom S. Chemmalakuzhy</h2>
-                    <p class="medium-text">Frontend Developer</p>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2" onclick="window.open('Media/Docs/Tom\'s Resume.pdf')">Download CV</button>
-                        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
-                    </div>
-                    <div id="socials-container">
-                        <img src="Media/Pics/Icons/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="window.open('https://www.linkedin.com/in/tom-s-chemmalakuzhy/', '_blank')">
-                    </div>            
+        <section id="profile">
+            <div class="section__pic-container">
+                <img 
+                    src="Media/Pics/Square.JPEG"
+                    alt="Tom S. Chemmalakuzhy profile picture"
+                />
+            </div>
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I'm</p>
+                <h1 class="title">Tom S. Chemmalakuzhy</h1>
+                <p class="section__text__p2">Frontend Developer</p>
+                <div class="btn-container">
+                    <button 
+                        class="btn btn-color-2"
+                        onclick="window.open('Media/Docs/Tom\'s Resume.pdf')">
+                        Download CV
+                    </button>
+                    <button
+                        class="btn btn-color-1"
+                        onclick="location.href='./#contact'">
+                        Contact Info
+                    </button>
                 </div>
+                <div id="socials-container">
+                    <img
+                        src="Media/Pics/Icons/linkedin.png"
+                        alt="My LinkedIn Profile" class="icon"
+                        onclick="window.open('https://www.linkedin.com/in/tom-s-chemmalakuzhy/', '_blank')"
+                    />
+                    <img
+                        src="Media/Pics/Icons/github.png"
+                        alt="My GitHub Profile" class="icon"
+                        onclick="window.open('https://github.com/tombuilds/tombuilds', '_blank')"
+                    />
+                </div>            
             </div>
         </section>
 
         <section id="about">
-            <p class="about-intro">Get To Know More</p>      
-            <h2>About Me</h2>
-            <p>Computer Science Master's candidate, specializing in Software Development, dedicated to advancing skills and contributing through academic rigor and hands-on experience.</p>
-            <a href="https://www.linkedin.com/in/tom-s-chemmalakuzhy/" class="linkedin-button">View LinkedIn Profile</a>
-        </section>           
-   
-        <section id="projects">
-                <div class="title">
-                    <p1>Browse My Recent</p1>
-                    <h2>Projects</h2>
-                </div> 
-                <div class="project">
-                    <div class="project-style">
-                        <h3>Project Title 1</h3>
-                        <div class="preview">
-                            <img src="project1-preview.jpg" alt="Project 1 Preview">
-                        </div>
-                        <p>Description of Project 1.</p>
-                        <a href="#">View Project</a>
-                        <div class="preview-window"></div> <!-- Preview window -->
-                    </div>
-                    <div class="project-style">
-                        <h3>Project Title 2</h3>
-                        <div class="preview">
-                            <img src="project2-preview.jpg" alt="Project 2 Preview">
-                        </div>
-                        <p>Description of Project 2.</p>
-                        <a href="#">View Project</a>
-                        <div class="preview-window"></div> <!-- Preview window -->
-                    </div>
-                    <!-- Add more projects as needed -->
+            <p class="section__text__p1">Get To Know More</p>      
+            <h1 class="title">About Me</h1>
+            <div class="section-container">
+                <div class="section__pic-container1">
+                    <img
+                        src="Media/Pics/Avatar.jpg"
+                        alt="Profile Picture"
+                        class="about-pic"
+                    />
                 </div>
-        </section>
-        
-        <section id="contact">
-            <div class="contact-container">
-                <p class="contact-intro">Get In Touch</p>
-                <h2>Contact Me</h2>
-                <div class="contact-info">
-                    <div class="contact-box">
-                        <img src="Media/Pics/Icons/email.jpg" alt="Email Icon" class="icon" onclick="window.open('mailto:tomchemmalakuzhy@gmail.com', '_blank')">
-                        <a href="mailto:tomchemmalakuzhy@gmail.com">tomchemmalakuzhy@gmail.com</a>
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <img 
+                                src="Media/Pics/Icons/experience.png"
+                                alt="Experience Icon"
+                                class="icon"
+                            />
+                            <h3>Experience</h3>
+                            <p>2+ years <br />Frontend Development | IT Business Analysis</p>
+                        </div>
+                        <div class="details-container">
+                            <img 
+                                src="Media/Pics/Icons/education.png"
+                                alt="Education Icon"
+                                class="icon"
+                            />
+                            <h3>Education</h3>
+                            <p>Masters Degree in Computer Science with a Concentration in Software Engineering</p>
+                        </div>
                     </div>
-                    <div class="contact-box">
-                        <img src="Media/Pics/Icons/linkedin.png" alt="LinkedIn Icon" class="icon" onclick="window.open('https://www.linkedin.com/in/tom-s-chemmalakuzhy/', '_blank')">
-                        <a href="https://www.linkedin.com/in/tom-s-chemmalakuzhy/" target="_blank" onclick="window.open('https://www.linkedin.com/in/tom-s-chemmalakuzhy/', '_blank')">LinkedIn</a>
+                    <div class="text-container">
+                        <p>Computer Science Master's candidate, specializing in Software Development, dedicated to advancing skills and contributing through academic rigor and hands-on experience.</p>
+                        <a
+                            href="https://www.linkedin.com/in/tom-s-chemmalakuzhy/" 
+                            class="linkedin-button"
+                            target="_blank">View LinkedIn Profile
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>        
+            <img
+                src="Media/Pics/Icons/down_arrow.png"
+                alt="Arrow Icon"
+                class="icon arrow"
+                onclick="location.href='./#experience'"
+            />
+        </section>
+    
+        <section id="experience">
+            <p class="section__text__p1">Explore MY</p>
+            <h1 class="title">Experience</h1>
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <h2 class="experience-sub-title">Frontend Development</h2>
+                        <div class="article-container">
+                            <article>
+                                <img
+                                    src="Media/Pics/Icons/checkmark.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>HTML</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img
+                                    src="Media/Pics/Icons/checkmark.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>CSS</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img
+                                    src="Media/Pics/Icons/checkmark.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>SQL</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img
+                                    src="Media/Pics/Icons/checkmark.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>JavaScript</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img
+                                    src="Media/Pics/Icons/checkmark.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Python</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <h2 class="experience-sub-title">Skills</h2>
+                        <div class="article-container">
+                            <article>
+                                <img
+                                    src="Media/Pics/Icons/checkmark.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Software Development Lifecycle</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img
+                                    src="Media/Pics/Icons/checkmark.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Agile Development</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img
+                                    src="Media/Pics/Icons/checkmark.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Project Management</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img
+                                    src="Media/Pics/Icons/checkmark.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Data Visualization</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img
+                                    src="Media/Pics/Icons/checkmark.png"
+                                    alt="Experience icon"
+                                    class="icon"
+                                />
+                                <div>
+                                    <h3>Business Analysis</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img
+                src="Media/Pics/Icons/down_arrow.png"
+                alt="Arrow Icon"
+                class="icon arrow"
+                onclick="location.href='./#projects'"
+            />
+        </section>
+
+        <section id="projects">
+            <p class="section__text__p1">Browse My Recent</p>
+            <h1 class="title">Project</h1>
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img
+                                src="Media/Pics/Project-1.jpg"
+                                alt="Project 1"
+                                class="project-img"
+                            />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Project One</h2>
+                        <div class="btn-container">
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="window.open('https://github.com/', '_blank')"
+                            >
+                                Github
+                            </button>
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="window.open('https://github.com/', '_blank')"
+                            >
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img
+                                src="Media/Pics/Project-2.jpg"
+                                alt="Project 2"
+                                class="project-img"
+                            />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Project Two</h2>
+                        <div class="btn-container">
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="window.open('https://github.com/', '_blank')"
+                            >
+                                Github
+                            </button>
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="window.open('https://github.com/', '_blank')"
+                            >
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="details-container color-container">
+                        <div class="article-container">
+                            <img
+                                src="Media/Pics/Project-3.jpg"
+                                alt="Project 3"
+                                class="project-img"
+                            />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Project Three</h2>
+                        <div class="btn-container">
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="window.open('https://github.com/', '_blank')"
+                            >
+                                Github
+                            </button>
+                            <button
+                                class="btn btn-color-2 project-btn"
+                                onclick="window.open('https://github.com/', '_blank')"
+                            >
+                                Live Demo
+                            </button>
+                        </div>
+                    </div>
+                    <img
+                        src="Media/Pics/Icons/down_arrow.png"
+                        alt="Arrow Icon"
+                        class="icon arrow"
+                        onclick="location.href='./#contact'"
+                    />
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <p class="section__text__p1">Get In Touch</p>
+            <h1 class="title">Contact Me</h1>
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <img
+                        src="Media/Pics/Icons/email.jpg"
+                        alt="Email Icon"
+                        class="icon contact-icon"
+                        onclick="window.open('mailto:tomchemmalakuzhy@gmail.com', '_blank')"
+                    />
+                    <p><a href="mailto:tomchemmalakuzhy@gmail.com">tomchemmalakuzhy@gmail.com</a></p>
+                </div>
+                <div class="contact-info-container">
+                    <img
+                        src="Media/Pics/Icons/linkedin.png"
+                        alt="LinkedIn Icon"
+                        class="icon contact-icon"
+                        onclick="window.open('https://www.linkedin.com/in/tom-s-chemmalakuzhy/', '_blank')"
+                    />
+                    <p><a
+                        href="https://www.linkedin.com/in/tom-s-chemmalakuzhy/"
+                        target="_blank"
+                        onclick="window.open('https://www.linkedin.com/in/tom-s-chemmalakuzhy/', '_blank')">
+                        LinkedIn
+                    </a></p>
+                </div>
+            </div>
+        </section>
+        
     </main>
 
     <footer>
-        <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <p>Copyright &copy; 2024 Tom S. Chemmalakuzhy. All rights reserved.</p>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &copy; 2024 Tom S. Chemmalakuzhy. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>

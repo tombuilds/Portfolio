@@ -266,7 +266,6 @@ section {
 /* ABOUT SECTION */
 #about {
     position: relative;
-    padding-top: 200px;
 }
 
 .about-containers {
@@ -307,7 +306,7 @@ section {
 
 .section-container {
     gap: 4rem;
-    height: 80%;
+    height: 28%;
 }
 
 .section__pic-container1 {
@@ -387,8 +386,8 @@ article .icon {
 
 .project-img {
     border-radius: 2rem;
-    width: 90%
-    height: 90%
+    width: 90%;
+    height: 90%;
 }
 
 .project-title {
